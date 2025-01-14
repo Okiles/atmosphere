@@ -162,6 +162,7 @@ echo <<<HTML
     <div class="popup-container hide">
         <div class="popup">
             <div class="github"><i class="fa-brands fa-github"></i> <p>Atmosphère : <a href="https://github.com/Okiles/atmosphere" target="_blank">https://github.com/Okiles/atmosphere</a></p></div>
+            <div class="github"><i class="fa-brands fa-github"></i> <p>Circulations : <a href="https://github.com/Okiles/circulations" target="_blank">https://github.com/Okiles/circulations</a></p></div>
             <div class="info"><p>Ip location : </p><a href="http://ip-api.com/json/{$_SERVER['REMOTE_ADDR']}">http://ip-api.com/json/{$_SERVER['REMOTE_ADDR']}</a></div>
             <div class="info"><p>Pollution : </p><a href="https://services3.arcgis.com/Is0UwT37raQYl9Jj/arcgis/rest/services/ind_grandest/FeatureServer/0/query?where=lib_zone%3D%27Nancy%27&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson&token=">https://services3.arcgis.com/Is0UwT37raQYl9Jj/arcgis/rest/services/ind_grandest/FeatureServer/0/</a></div>   
             <div class="info"><p>Weather : </p><a href="https://www.infoclimat.fr/public-api/gfs/xml?_ll={$lat},{$long}&_auth=ARsDFFIsBCZRfFtsD3lSe1Q8ADUPeVRzBHgFZgtuAH1UMQNgUTNcPlU5VClSfVZkUn8AYVxmVW0Eb1I2WylSLgFgA25SNwRuUT1bPw83UnlUeAB9DzFUcwR4BWMLYwBhVCkDb1EzXCBVOFQoUmNWZlJnAH9cfFVsBGRSPVs1UjEBZwNkUjIEYVE6WyYPIFJjVGUAZg9mVD4EbwVhCzMAMFQzA2JRMlw5VThUKFJiVmtSZQBpXGtVbwRlUjVbKVIuARsDFFIsBCZRfFtsD3lSe1QyAD4PZA%3D%3D&_c=19f3aa7d766b6ba91191c8be71dd1ab2">https://www.infoclimat.fr/public-api/gfs/</a></div>
@@ -188,7 +189,7 @@ echo <<<HTML
         L.marker([$iutncLat, $iutncLong]).addTo(map)
                 .bindPopup('<b>IUT Nancy-Charlemagne</b>');
         
-                let btn = document.getElementById("close-popup");
+        let btn = document.getElementById("close-popup");
         btn.addEventListener("click", () => {
             document.querySelectorAll('.popup-container').forEach(element => {
                 element.classList.add('hide');
